@@ -1,1 +1,5 @@
 logs/*
+json/taps/*.json
+*.pyc
+build
+pip-log.txt
