@@ -1,3 +1,4 @@
+import simplejson as json
 
 class BeerLocation(object):
   """ main class. Will be subclassed for each location """
@@ -16,7 +17,10 @@ class BeerLocation(object):
     print self.data
 
   def save_beers(self):
-    """ Save the data to the sqlite DB """
-
+    """ Save the data to the json file """
+    s = json.dumps(self.data)
+    f = open('../json/taps/' + self.name + '.json', 'w')
+    f.write(s)
+    f.close()
     
  
