@@ -9,7 +9,21 @@
             "Name": "Pinocchio's Beer Garden",
             "URL": "http://www.pinpizza.com/rotating-beer2012.asp?categoryID=78",
             "ShortName": "Pinocchios"
+        },
+        {
+            "Name": "Drafting Room",
+            "URL": "http://www.tdrtaplist.blogspot.com/",
+            "ShortName": "DraftingRoom"
+        },
+        {
+            "Name": "Iron Hill - Media",
+            "URL": "http://www.ironhillbrewery.com/media/monthly-releases.htm",
+            "ShortName": "IronHillMedia"
+        },
+        {
+            "Name": "Iron Hill - West Chester",
+            "URL": "http://www.ironhillbrewery.com/westchester/monthly-releases.htm",
+            "ShortName": "IronHillWestChester"
         }
-
     ]
 }

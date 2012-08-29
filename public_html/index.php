@@ -26,7 +26,7 @@ ini_set('display_errors', 'On');
     $taps = json_decode($taps_json);
     foreach ($taps->Taps as $tap) {
       print '<h3>' . $tap->Name . '</h3>';
-      $tap_json = file_get_contents('../json/' . $tap->ShortName . '.json');
+      $tap_json = file_get_contents('../json/taps/' . $tap->ShortName . '.json');
       $beers = json_decode($tap_json);
       foreach ($beers as $beer) {
         print '<li>' . $beer . '</li>';

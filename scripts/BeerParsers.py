@@ -36,3 +36,26 @@ def DraftingRoom(clas):
     cleaned = [z.lstrip('* ') for z in rawbeers[0] if isinstance(z,str) and z.startswith("*")]
     #print cleaned
     clas.data = cleaned 
+
+def IronHillMedia(clas):
+    tappath = '//h4[@class="monthly"]'
+    resp = l2.urlopen(clas.url)
+    data = resp.read()
+    doc = lxml.html.fromstring(data)
+    resraw = doc.xpath(tappath)
+    rawbeers = [x.text_content() for x in resraw]
+    #beers_str = '\n'.join(rawbeers)
+    #simplebeers = beers_str.encode('ascii', 'ignore')
+    clas.data = rawbeers
+
+def IronHillWestChester(clas):
+    tappath = '//h4[@class="monthly"]'
+    resp = l2.urlopen(clas.url)
+    data = resp.read()
+    doc = lxml.html.fromstring(data)
+    resraw = doc.xpath(tappath)
+    rawbeers = [x.text_content() for x in resraw]
+    #beers_str = '\n'.join(rawbeers)
+    #simplebeers = beers_str.encode('ascii', 'ignore')
+    clas.data = rawbeers
+
