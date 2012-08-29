@@ -1,13 +1,13 @@
 import simplejson as json
 from BeerLocation import BeerLocation
+#import Victory,Pinocchios,DraftingRoom
+import BeerParsers
 
 f = open('../json/taps.json', 'r')
 taps = json.loads(f.read())
 
 for tap in taps["Taps"]:
-  # print 'here...'
-  # print tap["URL"]
   loc = BeerLocation(tap["ShortName"], tap["URL"])
-  loc.parse()
+  getattr(BeerParsers,loc.name)(loc)
   loc.show_beers()
 

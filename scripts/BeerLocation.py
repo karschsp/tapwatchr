@@ -10,6 +10,7 @@ class BeerLocation(object):
 
   def parse(self):
     """ set self.data to a python list: This function will be overridden with each implementation """
+    n = self.name
     module = __import__(self.name)
     module.parse()
     print "parsed data "+self.name+" : "+self.url
