@@ -14,13 +14,19 @@ class BeerLocation(object):
     module = __import__(self.name)
     module.parse()
     print "parsed data "+self.name+" : "+self.url
+
+  def cleaner(self):
+    """ Clear function for general cleanup of raw data"""
+    self.data = [beer.title() if beer.find('\'') ==-1 else beer for beer in self.data]
   
   def show_beers(self):
     """ Confirmation for parsed data """
+    self.cleaner()
     print self.data
 
   def save_beers(self):
     """ Save the data to the json file """
+    self.cleaner()
     s = json.dumps(self.data)
     f = open('../json/taps/' + self.name + '.json', 'w')
     f.write(s)
