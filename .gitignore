@@ -1,5 +1,9 @@
 logs/*
+<<<<<<< HEAD
+*.pyc
+=======
 json/taps/*.json
 *.pyc
 build
 pip-log.txt
+>>>>>>> 274568e236b93833d9939bd69520baf445a5eebb
