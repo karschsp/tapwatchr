@@ -57,3 +57,12 @@ def GreatAmericanPubWayne(clas):
     rawbeers = [x.text_content() for x in resraw]
     beers = [beer.strip() for beer in rawbeers]
     clas.data = beers
+
+def CoccosAston(clas):
+    tappath = '//span[@class="menu_item"]'
+    resp = l2.urlopen(clas.url)
+    data = resp.read()
+    doc = lxml.html.fromstring(data)
+    resraw = doc.xpath(tappath)
+    rawbeers = [x.text_content() for x in resraw]
+    clas.data = rawbeers

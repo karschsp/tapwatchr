@@ -29,6 +29,11 @@
             "Name": "Great American Pub - Wayne",
             "URL": "http://www.greatamericanpub.com/GreatAmericanPubWayne/menu_gallery_view.asp?lid=2&mid=4&cid=28",
             "ShortName": "GreatAmericanPubWayne"
+        },
+        {
+            "Name": "Cocco's - Aston",
+            "URL": "http://www.coccosaston.com/menu_item_list.asp?menu_id=4&menu_cat_id=29",
+            "ShortName": "CoccosAston"
         }
     ]
 }
