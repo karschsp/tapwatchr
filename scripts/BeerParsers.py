@@ -33,9 +33,9 @@ def DraftingRoom(clas):
     resraw = doc.xpath(tappath)
     rawbeers = [x.text_content().split('\n') for x in resraw]
     #print rawbeers
-    cleaned = [z.lstrip('* ') for z in rawbeers[0] if isinstance(z,str) and z.startswith("*")]
+    cleaned = [z.lstrip('* ') for z in rawbeers[0] if z]
     #print cleaned
-    clas.data = cleaned 
+    clas.data = cleaned
 
 def IronHill(clas):
     tappath = '//h4[@class="monthly"]'
