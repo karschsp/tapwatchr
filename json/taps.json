@@ -24,6 +24,11 @@
             "Name": "Iron Hill - West Chester",
             "URL": "http://www.ironhillbrewery.com/westchester/monthly-releases.htm",
             "ShortName": "IronHillWestChester"
+        },
+        {
+            "Name": "Great American Pub - Wayne",
+            "URL": "http://www.greatamericanpub.com/GreatAmericanPubWayne/menu_gallery_view.asp?lid=2&mid=4&cid=28",
+            "ShortName": "GreatAmericanPubWayne"
         }
     ]
 }
