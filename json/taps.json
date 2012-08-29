@@ -26,6 +26,41 @@
             "ShortName": "IronHillWestChester"
         },
         {
+            "Name": "Iron Hill - Chestnut Hill",
+            "URL": "http://www.ironhillbrewery.com/chestnuthill/monthly-releases.htm",
+            "ShortName": "IronHillChestnutHill"
+        },        
+        {
+            "Name": "Iron Hill - Wilmington",
+            "URL": "http://www.ironhillbrewery.com/wilmington/monthly-releases.htm",
+            "ShortName": "IronHillWilmington"
+        },           
+        {
+            "Name": "Iron Hill - Phoenixville",
+            "URL": "http://www.ironhillbrewery.com/phoenixville/monthly-releases.htm",
+            "ShortName": "IronHillPhoenixville"
+        },                   
+        {
+            "Name": "Iron Hill - Lancaster",
+            "URL": "http://www.ironhillbrewery.com/lancaster/monthly-releases.htm",
+            "ShortName": "IronHillLancaster"
+        },                           
+        {
+            "Name": "Iron Hill - Maple Shade",
+            "URL": "http://www.ironhillbrewery.com/mapleshade/monthly-releases.htm",
+            "ShortName": "IronHillMapleShade"
+        },                                  
+        {
+            "Name": "Iron Hill - Newark",
+            "URL": "http://www.ironhillbrewery.com/newark/monthly-releases.htm",
+            "ShortName": "IronHillNewark"
+        },                              
+        {
+            "Name": "Iron Hill - North Wales",
+            "URL": "http://www.ironhillbrewery.com/northwales/monthly-releases.htm",
+            "ShortName": "IronHillNorthWales"
+        },                                                   
+        {
             "Name": "Great American Pub - Wayne",
             "URL": "http://www.greatamericanpub.com/GreatAmericanPubWayne/menu_gallery_view.asp?lid=2&mid=4&cid=28",
             "ShortName": "GreatAmericanPubWayne"
