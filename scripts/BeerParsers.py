@@ -37,7 +37,7 @@ def DraftingRoom(clas):
     #print cleaned
     clas.data = cleaned 
 
-def IronHillMedia(clas):
+def IronHill(clas):
     tappath = '//h4[@class="monthly"]'
     resp = l2.urlopen(clas.url)
     data = resp.read()
@@ -48,14 +48,12 @@ def IronHillMedia(clas):
     #simplebeers = beers_str.encode('ascii', 'ignore')
     clas.data = rawbeers
 
-def IronHillWestChester(clas):
-    tappath = '//h4[@class="monthly"]'
+def GreatAmericanPubWayne(clas):
+    tappath = '//div[@class="menuItemTitle"]'
     resp = l2.urlopen(clas.url)
     data = resp.read()
     doc = lxml.html.fromstring(data)
     resraw = doc.xpath(tappath)
     rawbeers = [x.text_content() for x in resraw]
-    #beers_str = '\n'.join(rawbeers)
-    #simplebeers = beers_str.encode('ascii', 'ignore')
-    clas.data = rawbeers
-
+    beers = [beer.strip() for beer in rawbeers]
+    clas.data = beers
