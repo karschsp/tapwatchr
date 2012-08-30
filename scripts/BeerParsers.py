@@ -66,3 +66,14 @@ def CoccosAston(clas):
     resraw = doc.xpath(tappath)
     rawbeers = [x.text_content() for x in resraw]
     clas.data = rawbeers
+
+def StationTaproom(clas):
+    tappath = '//tbody[@class="taplist"]/td/tr/p/span'
+    resp = l2.urlopen(clas.url)
+    data = resp.read()
+    doc = lxml.html.fromstring(data)
+    resraw = doc.xpath(tappath)
+    rawbeers = [x.text_content().split('\n') for x in resraw]
+    for beer in rawbeers:
+      print beer
+    clas.data = rawbeers

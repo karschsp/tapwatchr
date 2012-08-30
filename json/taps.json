@@ -69,6 +69,11 @@
             "Name": "Cocco's - Aston",
             "URL": "http://www.coccosaston.com/menu_item_list.asp?menu_id=4&menu_cat_id=29",
             "ShortName": "CoccosAston"
+        },
+        {
+            "Name": "Station Taproom",
+            "URL": "http://www.stationtaproom.com/home/tap-list",
+            "ShortName": "StationTaproom"
         }
     ]
 }
