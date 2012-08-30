@@ -1,7 +1,7 @@
 import sys
 import simplejson as json
 from BeerLocation import BeerLocation
-import BeerParsers
+import TestBeerParsers
 
 locationtotest = sys.argv[1]
 
@@ -12,6 +12,6 @@ for tap in taps["Taps"]:
   if tap["ShortName"] == locationtotest:
     loc = BeerLocation(tap["ShortName"], tap["URL"])
     print "Checking " + tap["URL"] + "\n"
-    getattr(BeerParsers,loc.name)(loc)
+    getattr(TestBeerParsers,loc.name)(loc)
     loc.show_beers()
     #loc.save_beers()
