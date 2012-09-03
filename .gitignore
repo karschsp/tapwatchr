@@ -5,3 +5,4 @@ json/taps/*.json
 build
 pip-log.txt
 *.sqlite
+sql/*
