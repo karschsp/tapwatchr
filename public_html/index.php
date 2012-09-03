@@ -18,24 +18,38 @@ ini_set('display_errors', 'On');
     <div data-role="page">
       <div data-role="header">
         <h1>Tapwatchr</h1>
-        <form name="signup" id="signup" method="POST" action="signup.php">
+        <form name="signup" id="signup" method="GET" action="signup.php">
           <input type="email" id="email" name="email" placeholder="you@example.com" />
           <input type="submit" value="Signup" />
         </form>
       </div>
       <div data-role="content">
-        <h2>Taps we're watching</h2>
         <?php
         $taps_json = file_get_contents('../json/taps.json');
         $taps = json_decode($taps_json);
+        $tap_names = array();
+        $tapcount = 0;
         foreach ($taps->Taps as $tap) {
-          print '<div class="tap" id="tap-' . $tap->ShortName . '" data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="false">';
-          print '<h3>' . $tap->Name . '</h3>';
-          $tap_json = file_get_contents('../json/taps/' . $tap->ShortName . '.json');
+          $tapcount++;
+          $tap_names[$tap->Name . ' - ' . $tap->City . ', ' . $tap->State] = array(
+            'Name' => $tap->Name . ' - ' . $tap->City . ', ' . $tap->State,
+            'ShortName' => $tap->ShortName,
+            'URL' => $tap->URL,
+          );
+        }
+        asort($tap_names);
+        print '<h2>We\'re watching ' . $tapcount . ' taps.</h2>';
+        foreach ($tap_names as $tap) {
+          print '<div class="tap" id="tap-' . $tap['ShortName'] . '" data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="false">';
+          print '<h3>' . $tap['Name'] . '</h3>';
+          $tap_json = file_get_contents('../json/taps/' . $tap['ShortName'] . '.json');
           $beers = json_decode($tap_json);
+          print '<a href="'  . $tap['URL'] . '">' . $tap['URL'] . '</a>';
           print('<ul>');
           foreach ($beers as $beer) {
-            print '<li>' . $beer . '</li>';
+            if (trim($beer) != '') {
+              print '<li>' . $beer . '</li>';
+            }
           }
           print('</ul>');
           print '</div>';
@@ -60,6 +74,9 @@ ini_set('display_errors', 'On');
       <blockquote>beer...the cause of, and solution to, all of life's problems.</blockquote>
 <a href="https://twitter.com/tapwatchr" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @tapwatchr</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <p>Last refreshed: <?php print date('F j, Y h:ia', strtotime(file_get_contents('../json/lastrun.txt')));?></p>
+    <p>Made by <a href="http://edmooney.com">two</a> <a href="http://stevekarsch.com">guys</a> who love <a href="http://untappd.com">beer</a> and <a href="http://lxml.de/">screen scraping</a>.</p>
+
     </footer>
   </body>
 </html>

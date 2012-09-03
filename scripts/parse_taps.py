@@ -1,8 +1,12 @@
 import simplejson as json
 from BeerLocation import BeerLocation
 import BeerParsers
+import datetime
+import os,sys
 
-with open('../json/taps.json', 'r') as f:
+dir = sys.path[0]
+with open(dir + '/../json/taps.json', 'r') as f:
+
   taps = json.loads(f.read())
 
   for tap in taps["Taps"]:
@@ -14,3 +18,7 @@ with open('../json/taps.json', 'r') as f:
 
     loc.show_beers()
     loc.save_beers()
+
+f = open(dir + '/../json/lastrun.txt', 'w')
+f.write(str(datetime.datetime.now()))
+f.close()

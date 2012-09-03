@@ -3,77 +3,142 @@
         {
             "Name": "Victory Brewery & Restaurant",
             "URL": "http://victorybeer.com/brewpub/on-tap",
-            "ShortName": "Victory"
+            "ShortName": "Victory",
+            "City": "Downingtown",
+            "State": "PA"
         },
         {
             "Name": "Pinocchio's Beer Garden",
             "URL": "http://www.pinpizza.com/rotating-beer2012.asp?categoryID=78",
-            "ShortName": "Pinocchios"
+            "ShortName": "Pinocchios",
+            "City": "Media",
+            "State": "PA"
         },
         {
             "Name": "Drafting Room",
             "URL": "http://www.tdrtaplist.blogspot.com/",
-            "ShortName": "DraftingRoom"
+            "ShortName": "DraftingRoom",
+            "City": "Exton",
+            "State": "PA"
         },
         {
-            "Name": "Iron Hill - Media",
+            "Name": "Iron Hill",
             "URL": "http://www.ironhillbrewery.com/media/monthly-releases.htm",
-            "ShortName": "IronHillMedia"
+            "ShortName": "IronHillMedia",
+            "City": "Media",
+            "State": "PA"
         },
         {
-            "Name": "Iron Hill - West Chester",
+            "Name": "Iron Hill",
             "URL": "http://www.ironhillbrewery.com/westchester/monthly-releases.htm",
-            "ShortName": "IronHillWestChester"
+            "ShortName": "IronHillWestChester",
+            "City": "West Chester",
+            "State": "PA"
         },
         {
-            "Name": "Iron Hill - Chestnut Hill",
+            "Name": "Iron Hill",
             "URL": "http://www.ironhillbrewery.com/chestnuthill/monthly-releases.htm",
-            "ShortName": "IronHillChestnutHill"
+            "ShortName": "IronHillChestnutHill",
+            "City": "Chestnut Hill",
+            "State": "PA"
         },        
         {
-            "Name": "Iron Hill - Wilmington",
+            "Name": "Iron Hill",
             "URL": "http://www.ironhillbrewery.com/wilmington/monthly-releases.htm",
-            "ShortName": "IronHillWilmington"
+            "ShortName": "IronHillWilmington",
+            "City": "Wilmington",
+            "State": "DE"
         },           
         {
-            "Name": "Iron Hill - Phoenixville",
+            "Name": "Iron Hill",
             "URL": "http://www.ironhillbrewery.com/phoenixville/monthly-releases.htm",
-            "ShortName": "IronHillPhoenixville"
+            "ShortName": "IronHillPhoenixville",
+            "City": "Phoenixville",
+            "State": "PA"
         },                   
         {
-            "Name": "Iron Hill - Lancaster",
+            "Name": "Iron Hill",
             "URL": "http://www.ironhillbrewery.com/lancaster/monthly-releases.htm",
-            "ShortName": "IronHillLancaster"
+            "ShortName": "IronHillLancaster",
+            "City": "Lancaster",
+            "State": "PA"
         },                           
         {
-            "Name": "Iron Hill - Maple Shade",
+            "Name": "Iron Hill",
             "URL": "http://www.ironhillbrewery.com/mapleshade/monthly-releases.htm",
-            "ShortName": "IronHillMapleShade"
+            "ShortName": "IronHillMapleShade",
+            "City": "Maple Shade",
+            "State": "NJ"
         },                                  
         {
-            "Name": "Iron Hill - Newark",
+            "Name": "Iron Hill",
             "URL": "http://www.ironhillbrewery.com/newark/monthly-releases.htm",
-            "ShortName": "IronHillNewark"
+            "ShortName": "IronHillNewark",
+            "City": "Newark",
+            "State": "DE"
         },                              
         {
-            "Name": "Iron Hill - North Wales",
+            "Name": "Iron Hill",
             "URL": "http://www.ironhillbrewery.com/northwales/monthly-releases.htm",
-            "ShortName": "IronHillNorthWales"
+            "ShortName": "IronHillNorthWales",
+            "City": "North Wales",
+            "State": "PA"
         },                                                   
         {
-            "Name": "Great American Pub - Wayne",
+            "Name": "Great American Pub",
             "URL": "http://www.greatamericanpub.com/GreatAmericanPubWayne/menu_gallery_view.asp?lid=2&mid=4&cid=28",
-            "ShortName": "GreatAmericanPubWayne"
+            "ShortName": "GreatAmericanPubWayne",
+            "City": "Wayne",
+            "State": "PA"
         },
         {
-            "Name": "Cocco's - Aston",
+            "Name": "Cocco's",
             "URL": "http://www.coccosaston.com/menu_item_list.asp?menu_id=4&menu_cat_id=29",
-            "ShortName": "CoccosAston"
+            "ShortName": "CoccosAston",
+            "City": "Aston",
+            "State": "PA"
         },
         {
-            "Name": "Station Taproom",
-            "URL": "http://www.stationtaproom.com/home/tap-list",
-            "ShortName": "StationTaproom"
+            "Name": "Three Tides",
+            "URL": "http://www.3tides.com/menu.php",
+            "ShortName": "ThreeTides",
+            "City": "Belfast",
+            "State": "ME"
+        },
+        {
+            "Name": "Sly Fox",
+            "URL": "http://www.slyfoxbeer.com/index.php/front/beer_list",
+            "ShortName": "SlyFoxPhoenixville",
+            "City": "Phoenixville",
+            "State": "PA"
+        },
+        {
+            "Name": "Sly Fox",
+            "URL": "http://www.slyfoxbeer.com/index.php/front/beer_list",
+            "ShortName": "SlyFoxPottstown",
+            "City": "Pottstown",
+            "State": "PA"
+        },
+        {
+            "Name": "Dogfish Head Brewings &amp; Eats",
+            "URL": "http://www.dogfish.com/restaurant/menus/brews-whats-on-tap.htm",
+            "ShortName": "Dogfish",
+            "City": "Rehobeth Beach",
+            "State": "DE"
+        },
+        {
+            "Name": "Craft Ale House",
+            "URL": "http://craftalehouse.blogspot.com/",
+            "ShortName": "CraftAleHouse",
+            "City": "Limerick",
+            "State": "PA"
+        },
+        {
+            "Name": "Rollie's Bar and Grill",
+            "URL": "http://www.rollies.me/9.html",
+            "ShortName": "Rollies",
+            "City": "Belfast",
+            "State": "ME"
         }
     ]
 }

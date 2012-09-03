@@ -1,6 +1,7 @@
 import urllib2 as l2
+from lxml.html import tostring, html5parser
 import lxml.html
-
+import html2text
 
 def Victory(clas):
     tappath='//div[@class="content"]/table/tbody/tr[2]/td[1]'
@@ -67,13 +68,67 @@ def CoccosAston(clas):
     rawbeers = [x.text_content() for x in resraw]
     clas.data = rawbeers
 
-def StationTaproom(clas):
-    tappath = '//tbody[@class="taplist"]/td/tr/p/span'
-    resp = l2.urlopen(clas.url)
-    data = resp.read()
-    doc = lxml.html.fromstring(data)
-    resraw = doc.xpath(tappath)
-    rawbeers = [x.text_content().split('\n') for x in resraw]
-    for beer in rawbeers:
-      print beer
-    clas.data = rawbeers
+def ThreeTides(clas):
+  resp = l2.urlopen(clas.url)
+  data = resp.read()
+  tappath = '//html/body/table/tr[2]/td/table/tr/td/table/tr[2]/td/table/tr[2]/td[2]'
+  doc = lxml.html.fromstring(data)
+  raw = doc.xpath(tappath)
+  for x in raw:
+    rawbeers = html2text.html2text(tostring(x))
+
+  beers = rawbeers.split('\n')
+  cleaned = [beer for beer in beers if not beer.isspace() and beer.find('*') == -1]
+  clas.data = cleaned
+
+def SlyFoxPhoenixville(clas):
+  resp = l2.urlopen(clas.url)
+  data = resp.read()
+  tappath = '/html/body/div/table/tr/td/table/tr[3]/td[1]/div//a'
+  doc = lxml.html.fromstring(data)
+  rawbeers = doc.xpath(tappath)
+  beers = [beer.text_content() for beer in rawbeers]
+  clas.data = beers
+
+def SlyFoxPottstown(clas):
+  resp = l2.urlopen(clas.url)
+  data = resp.read()
+  tappath = '/html/body/div/table/tr/td/table/tr[3]/td[2]//a'
+  doc = lxml.html.fromstring(data)
+  rawbeers = doc.xpath(tappath)
+  beers = [beer.text_content() for beer in rawbeers]
+  clas.data = beers
+
+def Dogfish(clas):
+  resp = l2.urlopen(clas.url)
+  data = resp.read()
+  tappath = '/html/body/div[2]/div[3]/div[3]/div/div/div[3]/div//p'
+  doc = lxml.html.fromstring(data)
+  rawbeers = doc.xpath(tappath)
+  beers = [beer.text_content() for beer in rawbeers]
+  cleaned = [beer for beer in beers if not beer.isspace() and beer.find('%') > 0]
+  clas.data = cleaned
+
+def CraftAleHouse(clas):
+  resp = l2.urlopen(clas.url)
+  data = resp.read()
+  tappath = '//div[@id="sidebar-left-1"]/div[@id="TextList1"]//li'
+  doc = lxml.html.fromstring(data)
+  rawbeers = doc.xpath(tappath)
+  beers = [x.text_content() for x in rawbeers]
+  clas.data = beers
+
+def Rollies(clas):
+  resp = l2.urlopen(clas.url)
+  data = resp.read()
+  tappath = '/html/body/table/tr/td/table/tr[4]/td/table/tr/td/table/tr/td/table/tr/td/table/tr[4]/td/table/tr//td'
+  doc = lxml.html.fromstring(data)
+  rawbeers = doc.xpath(tappath)
+  beers = list()
+  tmpbeers = list()
+  for x in rawbeers:
+    tmpbeers = x.text_content().split('\n')
+    for beer in tmpbeers:
+      beers.append(beer)
+
+  clas.data = beer

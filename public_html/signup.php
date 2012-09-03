@@ -1,14 +1,12 @@
 <?php
-print 'hey';
-if ($db = sqlite_open('tapwatch.sqlite', 0666, $sqliteerror)) {
-print 'now';
-$email = $_POST['email'];
+ini_set('error_reporting', E_ALL);
+ini_set('display_errors', 'On');
+if ($db = sqlite_open('../sql/tapwatch.sqlite', 0666, $sqliteerror)) {
+$email = $_GET['email'];
 
-$sql = "INSERT INTO subscriber (email, signupdatetime) VALUES('" . $email . "', " . date() . ")";
-print $sql;
+$sql = "INSERT INTO subscriber (email, signupdatetime) VALUES('" . $email . "', " . time() . ")";
+// print $sql;
 $result = sqlite_exec($db, $sql);
-
-
 
 if (!$result) {
   $_SESSION['error'][] = "There was an error signing you up!";
@@ -18,3 +16,4 @@ if (!$result) {
 } else {
   die($sqliteerror);
 }
+header('location: index.php');

@@ -1,4 +1,5 @@
 import simplejson as json
+import sys
 
 class BeerLocation(object):
   """ main class. Will be subclassed for each location """
@@ -26,9 +27,10 @@ class BeerLocation(object):
 
   def save_beers(self):
     """ Save the data to the json file """
+    dir = sys.path[0]
     self.cleaner()
     s = json.dumps(self.data)
-    f = open('../json/taps/' + self.name + '.json', 'w')
+    f = open(dir + '/../json/taps/' + self.name + '.json', 'w')
     f.write(s)
     f.close()
 
