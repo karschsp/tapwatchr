@@ -4,7 +4,7 @@ import lxml.html
 import html2text
 
 def Victory(clas):
-    tappath='//div[@class="content"]/table/tbody/tr[2]/td[1]'
+    tappath="//h3[text()='On Draft']/following-sibling::div[contains(@class,'twocol-one')]//a";
     resp = l2.urlopen(clas.url)
     data = resp.read()
     doc = lxml.html.fromstring(data)
@@ -117,6 +117,19 @@ def CraftAleHouse(clas):
   rawbeers = doc.xpath(tappath)
   beers = [x.text_content() for x in rawbeers]
   clas.data = beers
+
+def WestBradfordGrill(clas):
+  resp = l2.urlopen(clas.url)
+  data = resp.read()
+  #tappath = '//div[@id="sidebar-left-1"]/div[@id="TextList1"]//li'
+  #doc = lxml.html.fromstring(data)
+  a = lxml.html.fromstring(data)
+  print tostring(a)
+
+  #rawbeers = doc.xpath(tappath)
+  #beers = [x.text_content() for x in rawbeers]
+  #clas.data = beers
+
 
 def Rollies(clas):
   resp = l2.urlopen(clas.url)
